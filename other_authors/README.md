@@ -27,3 +27,5 @@ main binary instead of checking hostname. To use, edit change_hostname.ini by re
 "New_MiSTer_Hostname" with the desired hostname. For example:
    NEW_HOSTNAME="OOGABOOGA"
 
+###### terminfo_install.sh by deepthaw
+Installs additional terminfo files to enable better terminal support when using ssh to access MiSTer.
