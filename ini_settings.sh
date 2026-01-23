@@ -18,6 +18,7 @@
 # You can download the latest version of this script from:
 # https://github.com/MiSTer-devel/Scripts_MiSTer
 
+# Version 1.2.7 - 2026-01-23 - Added autofire_rates.
 # Version 1.2.6 - 2024-02-11 - Added osd_lock, osd_lock_time, and debug settings. Fixed naming convention being wrong for jamma_vid and jamma_pid.
 # Version 1.2.5 - 2023-04-08 - Added vga_mode, ntsc_mode, and removed ypbpr (deprecated).
 # Version 1.2.4 - 2022-12-21 - Added disable_autofire setting option
@@ -65,7 +66,7 @@ DIALOG_HEIGHT="31"
 FONTS_DIRECTORY="/media/fat/font"
 FONTS_EXTENSION="pf"
 
-INI_KEYS="video_mode vscale_mode vsync_adjust vrr_mode hdmi_game_mode hdmi_audio_96k direct_video hdmi_limited dvi_mode vscale_border vga_scaler forced_scandoubler vga_sog vga_mode ntsc_mode composite_sync video_mode_ntsc video_mode_pal refresh_min refresh_max vrr_min_framerate vrr_max_framerate vrr_vesa_framerate menu_pal osd_rotate browse_expand rbf_hide_datecode fb_terminal fb_size osd_timeout video_off video_info controller_info recents font disable_autofire mouse_throttle wheel_force sniper_mode bootscreen reset_combo key_menu_as_rgui keyrah_mode jamma_vid jamma_pid bootcore bootcore_timeout osd_lock osd_lock_time debug"
+INI_KEYS="video_mode vscale_mode vsync_adjust vrr_mode hdmi_game_mode hdmi_audio_96k direct_video hdmi_limited dvi_mode vscale_border vga_scaler forced_scandoubler vga_sog vga_mode ntsc_mode composite_sync video_mode_ntsc video_mode_pal refresh_min refresh_max vrr_min_framerate vrr_max_framerate vrr_vesa_framerate menu_pal osd_rotate browse_expand rbf_hide_datecode fb_terminal fb_size osd_timeout video_off video_info controller_info recents font disable_autofire autofire_rates mouse_throttle wheel_force sniper_mode bootscreen reset_combo key_menu_as_rgui keyrah_mode jamma_vid jamma_pid bootcore bootcore_timeout osd_lock osd_lock_time debug"
 
 KEY_video_mode=(
 	"Video resolution and frequency"
@@ -515,6 +516,14 @@ KEY_disable_autofire=(
 	"Disables autofire if for some reason you do not require it or if it's accidentally triggered."
 	"0|Off"
 	"1|On"
+)
+
+KEY_autofire_rates=(
+	"Sets selectable rates for autofire (in hertz). Some games may not work well with maximum rate."
+	"10,30|10/30Hz|fast/maximum"
+	"10,15,30|10/15/30Hz|fast/faster/maximum"
+	"5,10,15,30|5/10/15/30Hz|slow/fast/faster/maximum"
+	"5,7.5,10,15,30|5/7.5/10/15/30Hz|slow/medium/fast/faster/maximum"
 )
 
 KEY_mouse_throttle=(
